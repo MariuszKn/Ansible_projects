@@ -1,8 +1,19 @@
----
-- name: Hello World!
-  hosts: 192.168.47.106
-
+--- # Install MariaDB
+- hosts: 192.168.47.106
+  remote_user: mkociuba
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: yes
   tasks:
-
-  - name: Hello World!
-    shell: echo "Hi! Tower is working!"
+    - name: Installing MariaDB
+      yum:
+        name: Installing MariaDB
+        state: latest
+      notify:
+        - startservice
+  handlers:
+    - name: startservice
+      service:
+        name: mariadb
+        state: restarted
