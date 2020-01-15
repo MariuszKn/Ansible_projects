@@ -1,0 +1,14 @@
+--- # Install MariaDB
+- hosts: all
+  tasks:
+    - name: Installing MariaDB
+      apt:
+        name: mariadb-server
+        state: latest
+      notify:
+        - startservice
+  handlers:
+    - name: startservice
+      service:
+        name: mariadb
+        state: restarted
