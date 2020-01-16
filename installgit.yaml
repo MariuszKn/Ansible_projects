@@ -1,6 +1,7 @@
 --- # install git
 - hosts: all
   gather_facts: false
+  become: sudo
   tasks:
   - name: install git
     apt:
