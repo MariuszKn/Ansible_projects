@@ -1,5 +1,5 @@
 --- # install git
-- hosts: awxws1
+- hosts: 192.168.47.106
   gather_facts: false
   become: sudo
   tasks:
