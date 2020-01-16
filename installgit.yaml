@@ -1,6 +1,6 @@
 --- # install git
 - hosts: all
-  become: yes
+  gather_facts: false
   tasks:
   - name: install git
     apt:
