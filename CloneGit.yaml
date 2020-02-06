@@ -1,0 +1,15 @@
+---
+- name: Copy GitHub Repo
+  hosts: awxws1
+  gather_facts: false
+
+  tasks:
+  - name: Create directory
+    shell: 
+   	  echo "sudo mkdir repo"
+
+  - name: Clone Repo
+    git:
+      repo: https://github.com/MariuszKn/Ansible_projects.git
+      dest: /home/mkociuba/repo
+      clone: yes
