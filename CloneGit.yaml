@@ -5,8 +5,7 @@
 
   tasks:
   - name: Create directory
-    shell: 
-   	  echo "sudo mkdir repo"
+    shell: echo "sudo mkdir repo"
 
   - name: Clone Repo
     git:
