@@ -1,5 +1,5 @@
 --- # Install MariaDB
-- hosts: awxws1
+- hosts: all
   tasks:
     - name: Installing MariaDB
       apt:
