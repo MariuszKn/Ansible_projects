@@ -11,7 +11,9 @@
       state: latest
   
   - name: Create directory
-    shell: echo "sudo mkdir repo"
+    file:
+      path: /home/mkociuba/repo
+      state: directory
 
   - name: Clone Repo
     git:
