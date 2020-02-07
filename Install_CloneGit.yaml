@@ -4,6 +4,11 @@
   gather_facts: false
 
   tasks:
+  - name: Install GitHub
+    apt:
+      name: git
+      state: latest
+  
   - name: Create directory
     shell: echo "sudo mkdir repo"
 
