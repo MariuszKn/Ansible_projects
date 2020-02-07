@@ -2,6 +2,7 @@
 - name: Copy GitHub Repo
   hosts: awxws1
   gather_facts: false
+  become: true
 
   tasks:
   - name: Install GitHub
