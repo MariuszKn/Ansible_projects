@@ -1,6 +1,6 @@
 ---
-- name: Copy GitHub Repo
-  hosts: awxws1
+# Copy GitHub Repo
+- hosts: awxws1
   gather_facts: false
   become: true
 
