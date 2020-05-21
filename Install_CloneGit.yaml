@@ -1,6 +1,6 @@
 ---
 # Copy GitHub Repo
-- hosts: awxws1
+- hosts: all
   gather_facts: false
   become: true
 
