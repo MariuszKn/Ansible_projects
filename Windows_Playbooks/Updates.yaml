@@ -10,3 +10,7 @@
         - SecurityUpdates
         - CriticalUpdates
         - UpdateRollups
+        
+  - name: Reboot if wants
+    win_reboot:
+    when: update_result.reboot_required
