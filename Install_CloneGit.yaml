@@ -11,7 +11,7 @@
   
   - name: Create directory
     file:
-      path: /home/mkociuba/repo
+      path: /home/service/repo
       state: directory
 
   - name: Clone Repo
