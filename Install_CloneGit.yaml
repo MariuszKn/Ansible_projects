@@ -17,5 +17,5 @@
   - name: Clone Repo
     git:
       repo: https://github.com/MariuszKn/Ansible_projects.git
-      dest: /home/mkociuba/repo
+      dest: /home/service/repo
       clone: yes
