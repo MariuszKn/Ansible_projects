@@ -2,7 +2,6 @@
 # Copy GitHub Repo
 - hosts: all
   gather_facts: false
-  become: true
 
   tasks:
   - name: Install GitHub
