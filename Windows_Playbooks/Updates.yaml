@@ -4,12 +4,12 @@
   gather_facts: false
   
   tasks:
-  #- name: Install all security, critical, and rollup updates without a scheduled task
-  #  win_updates:
-  #    category_names:
-  #      - SecurityUpdates
-  #      - CriticalUpdates
-  #      - UpdateRollups
+  - name: Install all security, critical, and rollup updates without a scheduled task
+    win_updates:
+      category_names:
+        - SecurityUpdates
+        - CriticalUpdates
+        - UpdateRollups
   - win_updates:
     register: update_result
   - win_reboot:
